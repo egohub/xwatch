@@ -1,0 +1,21 @@
+<ion-view view-title="Account">
+ 
+    <ion-content class="padding">
+    
+     <p>{{websiteName}}</p>
+    <ion-list class="list">
+      <a class="item item-thumbnail-left" href="#/tab/dash/{{p.id}}" ng-repeat="p in items">
+        <img src=" ">
+          <p>{{p.date}}</p>
+          <h2>{{p.title.rendered}}</h2>
+          <h4>Discription</h4>
+      </a>
+      
+    </ion-list>
+     
+    
+        <ion-infinite-scroll ng-if="init.busy" on-infinite="loadMore()" distance="1%">
+        </ion-infinite-scroll>
+  </ion-content>
+  
+</ion-view>

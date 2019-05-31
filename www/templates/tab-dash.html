@@ -1,0 +1,40 @@
+
+<ion-view view-title="All Movies">
+  <ion-content class="padding">
+    
+     <p>{{websiteName}}</p>
+    <ion-list class="list">
+      <a class="item item-thumbnail-left" href="#/tab/dash/{{p.id}}" ng-repeat="p in items">
+        <img src=" ">
+          <p>{{p.date}}</p>
+          <h2>{{p.title.rendered}}</h2>
+          <h4>Discription</h4>
+      </a>
+      
+    </ion-list>
+     
+    
+        <ion-infinite-scroll ng-if="init.busy" on-infinite="loadMore()" distance="1%">
+        </ion-infinite-scroll>
+
+  </ion-content>
+</ion-view> 
+
+<!--
+
+<ion-view view-title="{{websiteName}}">
+    <ion-content class="padding">
+        <div class="list card" ng-repeat="p in items">
+            <div ng-click="postItem(p.id)">
+                <div class="item item-divider">{{p.title.rendered}}</div>
+                <div class="item item-body">
+                    <img class="featured-image" ng-src="{{p.featured_image.attachment_meta.sizes.thumbnail.url}}">
+                    <div ng-bind-html="p.content.rendered"></div>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="init.busy" on-infinite="loadMore()" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
+--!>
