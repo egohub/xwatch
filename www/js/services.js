@@ -7,7 +7,7 @@ angular.module('starter.service', [])
       return $http.get('https://allmoviemm.com/wp-json/wp/v2/posts');
     },
      getId : function(id) {
-      return $http.get('https://xvipx.herokuapp.com/posts/'+id);
+      return $http.get('posts/'+id);
     }
  };
 })
