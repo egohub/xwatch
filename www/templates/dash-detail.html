@@ -9,9 +9,9 @@
      </div>
      <div class="item item-body">
     <img ng-src="{{post.img}}" class="full-image">
-    <button class="button button-assertive" href="::post.url">Download Link</button>
+    <button class="button button-assertive" href="::post.skipUrl" target="_blank">Download Link</button>
      </div>
-     {{post}}
+     <a href="{{post.skipUrl}}" target="_blank">Visit LINK!</a>
    </div>
   </ion-content>
 </ion-view>
