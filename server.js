@@ -5,6 +5,7 @@ var express = require('express'),
 
 var app = express();
 
+app.use(express.static(__dirname + '/www'));
 app.get('/posts', api.posts);
 app.get('/posts/:id', api.post);
 
